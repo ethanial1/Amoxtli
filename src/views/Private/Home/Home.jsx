@@ -1,7 +1,8 @@
 import React from 'react';
 import AllBooks from '../../../components/Books/AllBooks';
-import NewRealize from '../../../components/Books/NewRealize';
+import NewRealease from '../../../components/Books/NewRealease';
 import ReadLast from '../../../components/Books/ReadLast';
+import PreLoader from '../../../components/Loaders/PreLoader';
 
 const Home = () => {
   return (
@@ -12,12 +13,13 @@ const Home = () => {
       </div>
       <div>
         <h3>New Realice</h3>
-        <NewRealize />
+        <NewRealease />
       </div>
       <div>
         <h3>All our books</h3>
         <AllBooks />
       </div>
+      <PreLoader />
     </div>
   )
 };

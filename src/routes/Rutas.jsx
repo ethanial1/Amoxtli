@@ -9,7 +9,7 @@ const Rutas = () => {
   return (
     <Switch>
       <Route exact path='/' children={<Landing />}/>
-      <PrivateRoute exact path='/amoxtli' component={Private}/>
+      <PrivateRoute path='/amoxtli' component={Private}/>
       <Route path='*' children={<div>hola hola</div>}/>
     </Switch>
   )

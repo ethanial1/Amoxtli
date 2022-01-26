@@ -10,10 +10,10 @@ const SideBar = ({url}) => {
             <UserCard name='Miguel Anguel' typeUser='Lector'/>
             <div className={style.sidebar_menu}>
                 <ul>
-                    <li><NavLink to={url}><i className='bx bxs-home'></i><span>Home</span></NavLink></li>
-                    <li><NavLink to={`${url}/search`}><i className='bx bxs-search-alt-2' ></i><span>Search</span></NavLink></li>
-                    <li><NavLink to={`${url}/readingnow`}><i className='bx bx-library'></i><span>Reading Now</span></NavLink></li>
-                    <li><NavLink to={`${url}/perfil`}><i className='bx bxs-user'></i><span>Perfil</span></NavLink></li>
+                    <li><NavLink exact to={url}><i className='bx bxs-home'></i><span>Home</span></NavLink></li>
+                    <li><NavLink exact to={`${url}/search`}><i className='bx bxs-search-alt-2' ></i><span>Search</span></NavLink></li>
+                    <li><NavLink exact to={`${url}/reading`}><i className='bx bx-library'></i><span>Reading Now</span></NavLink></li>
+                    <li><NavLink exact to={`${url}/perfil`}><i className='bx bxs-user'></i><span>Perfil</span></NavLink></li>
                     <li>
                         <button>
                             <i className='bx bxs-exit' ></i>

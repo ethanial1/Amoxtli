@@ -180,3 +180,56 @@
 }
 
 
+/* =========== BOOK CARD SMALL ============== */
+.book_small {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 2rem;
+}
+
+.book_small > img {
+    width: 130px;
+    height: 195px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.book_small_info {
+    padding: 20px;
+}
+
+.book_small_info div:nth-child(1) > span {
+    display: block;
+    margin: .5rem 0;
+}
+
+.stars {
+    margin: 1rem 0;
+}
+/* =========== GRIDBOOKS ============== */
+
+.grid_books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(100vw /5));
+    padding: 10px;
+    justify-content: center;
+}
+
+/* =========== CAROUSEL ============== */
+.snap_x {
+    scroll-snap-type: proximity;
+    overflow-x: auto;
+}
+
+.snap_flex {
+    width: 100%;
+    display: flex;
+    scroll-snap-type: x proximity;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.snap_flex::-webkit-scrollbar {
+    width: 0;
+}
