@@ -1,13 +1,13 @@
 import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 import { Redirect, Route } from 'react-router-dom';
 
 const PrivateRoute = ({component: Component, ...res}) => {
-    //TODO hacer la verificación con auth0 para renderizar o no el componente
-    const auth = true;
+    const { isAuthenticated } = useAuth0();
 
     return (
         <Route {...res} >
-            {auth ? <Component /> : <Redirect to='/'/>}
+            {isAuthenticated ? <Component /> : <Redirect to='/'/>}
         </Route>
     )
 };

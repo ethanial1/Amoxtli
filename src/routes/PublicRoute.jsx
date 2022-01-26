@@ -1,11 +1,13 @@
 import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 import { Route, Redirect } from 'react-router-dom';
 
 const PublicRoute = ({component: Component, ...res}) => {
-    const auth = true;
+    const { isAuthenticated } = useAuth0();
+
     return (
         <Route {...res} >
-            {!auth ? <Component /> : <Redirect to='/amoxtli'/>}
+            { !isAuthenticated ? <Component /> : <Redirect to='/amoxtli'/>}
         </Route>
     )
 };

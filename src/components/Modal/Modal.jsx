@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { helpHttp } from '../../helpers/helpHttp';
 import { URL_GET_ALL_BOOKS } from '../../helpers/urls';
+import { deleteBookSaved, saveNewBook } from '../../Redux/actions/actions';
 import st from './Modal.module.css';
 
 const Modal = ({isOpen, closeModal, idbook}) => {
@@ -13,6 +14,7 @@ const Modal = ({isOpen, closeModal, idbook}) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        setData({})
         const getInfo = async () => {
             try {
                 setLoading(true);
@@ -30,11 +32,11 @@ const Modal = ({isOpen, closeModal, idbook}) => {
     
     const handleSave = () => {
         if(!data.saved) {
-            dispatch()
+            dispatch(saveNewBook(data))
             closeModal();
             return
         }
-        dispatch();
+        dispatch(deleteBookSaved(idbook));
         closeModal();
     }
 
