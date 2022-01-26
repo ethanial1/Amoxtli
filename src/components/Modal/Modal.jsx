@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { helpHttp } from '../../helpers/helpHttp';
 import { URL_GET_ALL_BOOKS } from '../../helpers/urls';
-import { deleteBookSaved, saveNewBook } from '../../Redux/actions/actions';
+import { addNewLecture, deleteBookSaved, saveNewBook } from '../../Redux/actions/actions';
 import st from './Modal.module.css';
 
 const Modal = ({isOpen, closeModal, idbook}) => {
@@ -11,6 +13,7 @@ const Modal = ({isOpen, closeModal, idbook}) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    const { authid } = useSelector(state => state);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -19,7 +22,7 @@ const Modal = ({isOpen, closeModal, idbook}) => {
             try {
                 setLoading(true);
 
-                let res = await helpHttp().get(`${URL_GET_ALL_BOOKS}/${idbook}/1`);
+                let res = await helpHttp().get(`${URL_GET_ALL_BOOKS}/${idbook}/${authid}`);
                 setData(res)
             } catch (error) {
                 setError(error);
@@ -32,19 +35,19 @@ const Modal = ({isOpen, closeModal, idbook}) => {
     
     const handleSave = () => {
         if(!data.saved) {
-            dispatch(saveNewBook(data))
+            dispatch(saveNewBook(data, authid))
             closeModal();
             return
         }
-        dispatch(deleteBookSaved(idbook));
+        dispatch(deleteBookSaved(idbook, authid));
         closeModal();
     }
 
     const handleRead = () => {
         if(!data.leyendo) {
-            return dispatch()
+            return dispatch(addNewLecture(data, authid))
         }
-
+        
     }
 
     return (

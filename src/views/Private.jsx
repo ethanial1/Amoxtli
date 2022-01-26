@@ -7,14 +7,17 @@ import SideBar from '../components/SideBar/SideBar';
 import Home from './Home/Home';
 import Reading from './Reading/Reading';
 import Search from './Search/Search';
-import { helpHttp } from '../helpers/helpHttp';
+import { useDispatch } from 'react-redux';
+import { authId } from '../Redux/actions/actions';
 
 const Private = () => {
   const { user } = useAuth0();
   const { url, path } = useRouteMatch();
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    helpHttp().post("",{})
+    dispatch(authId(user.sub.split('|')[1]));
   }, []);
   
 
