@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { getReadLast } from '../../Redux/actions/actions';
 import BookCard from './BookCard';
 
 import st from './Books.module.css';
 
 const ReadLast = () => {
+    const currentLectures = useSelector(state => state.currentLectures);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      dispatch(getReadLast());
+    }, []);
+
     return (
-        <div className={st.snap_x}>
-            <div className={st.snap_flex}>
-                <BookCard color={'red'} titulo={'todos los dias son nuestros'} img='https://1.bp.blogspot.com/-hraJpjY6c6w/WJ7PckR0q6I/AAAAAAAAJtY/t5yze0PF5P0zwDPyThq0uYV6sMLurNkzwCLcB/s1600/1.jpg'/>
+        currentLectures.length > 0 ?
+            <>
+            <h3>Books you read last</h3>
+            <div className={st.snap_x}>
+                <div className={st.snap_flex}>
+                    { currentLectures.map(libro => <BookCard key={libro.idbook} titulo={libro.titulo} currentpage={libro.currentpage} img={libro.img} color={libro.color}/>)}
+                </div>
             </div>
-        </div>
+            </>
+        : null
     )
 };
 

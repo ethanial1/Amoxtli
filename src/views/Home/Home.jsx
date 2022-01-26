@@ -3,20 +3,23 @@ import AllBooks from '../../components/Books/AllBooks';
 import NewRealease from '../../components/Books/NewRealease';
 import ReadLast from '../../components/Books/ReadLast';
 import PreLoader from '../../components/Loaders/PreLoader';
+import Modal from '../../components/Modal/Modal';
+import { useModal } from '../../hooks/useModal';
 
 const Home = () => {
+  const [idbook, isOpen, opeModal, closeModal] = useModal(false);
   return (
     <div className='wrapper'>
       <div>
-        <h3>Books you read last</h3>
         <ReadLast />
       </div>
       <div>
-        <NewRealease />
+        <NewRealease openModal={opeModal}/>
       </div>
       <div>
-        <AllBooks />
+        <AllBooks openModal={opeModal}/>
       </div>
+      <Modal isOpen={isOpen} closeModal={closeModal} idbook={idbook}/>
       <PreLoader />
     </div>
   )
