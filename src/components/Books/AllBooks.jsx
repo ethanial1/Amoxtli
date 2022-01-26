@@ -5,7 +5,6 @@ import CircleLoader from '../Loaders/CircleLoader';
 import BookItem from './BookItem';
 import st from './Books.module.css';
 
-// TODO hacer la petición al servido para cargar todos los libros
 const AllBooks = () => {
 
   const [data, error, loading] = useFetch(GET_ALL_BOOKS);

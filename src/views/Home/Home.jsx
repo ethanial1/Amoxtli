@@ -1,8 +1,8 @@
 import React from 'react';
-import AllBooks from '../../../components/Books/AllBooks';
-import NewRealease from '../../../components/Books/NewRealease';
-import ReadLast from '../../../components/Books/ReadLast';
-import PreLoader from '../../../components/Loaders/PreLoader';
+import AllBooks from '../../components/Books/AllBooks';
+import NewRealease from '../../components/Books/NewRealease';
+import ReadLast from '../../components/Books/ReadLast';
+import PreLoader from '../../components/Loaders/PreLoader';
 
 const Home = () => {
   return (
