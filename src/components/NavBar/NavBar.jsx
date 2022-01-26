@@ -9,14 +9,14 @@ const NavBar = () => {
                 <img src={logo} alt="amoxtli"/>
             </div>
             <div className={st.search_form}>
-                <div class={st.input_group}>
+                <div className={st.input_group}>
                     <button>
-                        <i class='bx bx-search-alt' ></i>
+                        <i className='bx bx-search-alt' ></i>
                     </button>
                     <input type="text" placeholder="Search" />
                 </div>
                 <div className={st.user_img}>
-                    <img src="https://uh.gsstatic.es/sfAttachPlugin/970899.jpg" alt="" srcset="" />
+                    <img src="https://uh.gsstatic.es/sfAttachPlugin/970899.jpg" alt="" />
                 </div>
             </div>
         </nav>

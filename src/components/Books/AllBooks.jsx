@@ -1,4 +1,5 @@
 import React from 'react';
+import { GET_ALL_BOOKS } from '../../helpers/urls';
 import { useFetch } from '../../hooks/useFetch';
 import CircleLoader from '../Loaders/CircleLoader';
 import BookItem from './BookItem';
@@ -7,7 +8,7 @@ import st from './Books.module.css';
 // TODO hacer la petición al servido para cargar todos los libros
 const AllBooks = () => {
 
-  const [data, error, loading] = useFetch();
+  const [data, error, loading] = useFetch(GET_ALL_BOOKS);
 
     if(!data) return null;
 
@@ -18,7 +19,7 @@ const AllBooks = () => {
     <>
       <h3>All our books</h3>
       <div className={st.grid_books}>
-        <BookItem titulo={'Ethan'} autor={'Ethan'} lastname={'Toledo'} genero={'Aventura'} img={'https://i.pinimg.com/originals/01/36/eb/0136ebf96184d69dd318befae6fc56f4.jpg'}/>
+        { data.data.map(libro => <BookItem key={libro.idbook} titulo={libro.titulo} autor={libro.autor} lastname={libro.lastname} genero={libro.genero} img={libro.img}/>)}
       </div>
     </>
     

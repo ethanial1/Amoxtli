@@ -5,7 +5,7 @@ const BookItem = ({titulo, autor, lastname, genero, img, openModal}) => {
   return (
     <div className={style.book}>
         <button className={style.book_item} onClick={openModal}>
-            <img src={img} alt={titulo} />
+            <img src={`http://localhost:4000/ingress/assets/cover/${img}`} alt={titulo} />
             <div className={style.book_item_info}>
                 <h5>{titulo}</h5>
                 <span>{autor} {lastname}</span>
