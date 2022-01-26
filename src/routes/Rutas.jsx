@@ -1,6 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Private from '../views/Private/Private';
 import Landing from '../views/Landing/Landing';
 import PrivateRoute from './PrivateRoute';

@@ -188,7 +188,7 @@
     margin-bottom: 2rem;
 }
 
-.book_small > img {
+.book_small > button > img {
     width: 130px;
     height: 195px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.5);
@@ -210,7 +210,8 @@
 
 .grid_books {
     display: grid;
-    grid-template-columns: repeat(auto-fill, calc(100vw /5));
+    grid-template-columns: repeat(auto-fill, 180px);
+    gap: 40px;
     padding: 10px;
     justify-content: center;
 }

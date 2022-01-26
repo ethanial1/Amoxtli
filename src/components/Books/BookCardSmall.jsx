@@ -4,7 +4,9 @@ import st from './Books.module.css';
 const BookCardSmall = ({img, titulo, autor}) => {
     return (
         <div className={st.book_small}>
-            <img src="https://www.tulectura.es/wp-content/uploads/2016/02/el-principe-destronado.jpg" alt="el principe destronado" />
+            <button>
+                <img src="https://www.tulectura.es/wp-content/uploads/2016/02/el-principe-destronado.jpg" alt="el principe destronado" />
+            </button>
             <div className={st.book_small_info}>
                 <div>
                     <h4>{titulo}</h4>

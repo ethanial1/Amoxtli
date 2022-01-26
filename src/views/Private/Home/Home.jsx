@@ -12,11 +12,9 @@ const Home = () => {
         <ReadLast />
       </div>
       <div>
-        <h3>New Realice</h3>
         <NewRealease />
       </div>
       <div>
-        <h3>All our books</h3>
         <AllBooks />
       </div>
       <PreLoader />
