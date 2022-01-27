@@ -5,6 +5,8 @@ export const useFetch = (url) => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
+    const token = localStorage.getItem('hora');
+
     useEffect(() => {
         const abortController = new AbortController();
         const signal = abortController.signal;
@@ -12,7 +14,11 @@ export const useFetch = (url) => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const res = await fetch(url);
+                const res = await fetch(url, {
+                    headers: {
+                        authorization: `Bearer ${JSON.parse(token)}`
+                    }
+                });
                 if(!res.ok) {
                     let err = new Error("Error en la petición Fetch");
                     err.status = res.status || '00';

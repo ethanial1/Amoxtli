@@ -12,6 +12,8 @@ ReactDOM.render(
       domain="heredero.us.auth0.com"
       clientId="Lg7o5JYF8mZfAkqMUVB9SeQVWYMm4Xx9"
       redirectUri={window.location.origin}
+      audience='heredero amoxtli'
+      scope='openid profile email'
       >
       <Provider store={store}>
         <App />

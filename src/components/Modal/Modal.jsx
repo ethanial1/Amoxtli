@@ -22,7 +22,7 @@ const Modal = ({isOpen, closeModal, idbook}) => {
             try {
                 setLoading(true);
 
-                let res = await helpHttp().get(`${URL_GET_ALL_BOOKS}/${idbook}/${authid}`);
+                let res = await helpHttp().get(`${URL_GET_ALL_BOOKS}${idbook}/${authid}`);
                 setData(res)
             } catch (error) {
                 setError(error);

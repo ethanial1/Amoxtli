@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { URL_GET_ALL_BOOKS } from '../../helpers/urls';
 import { useFetch } from '../../hooks/useFetch';
 import CircleLoader from '../Loaders/CircleLoader';
@@ -6,12 +7,11 @@ import BookItem from './BookItem';
 import st from './Books.module.css';
 
 const AllBooks = ({openModal}) => {
-
   const [data, error, loading] = useFetch(URL_GET_ALL_BOOKS);
 
-    if(!data) return null;
+  if(!data) return null;
 
-    if(error) return <div>error</div>;
+  if(error) return <div>error</div>;
 
   return (
     loading ? <CircleLoader /> :

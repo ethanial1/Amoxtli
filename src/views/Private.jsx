@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, useRouteMatch } from 'react-router-dom';
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -11,17 +11,29 @@ import { useDispatch } from 'react-redux';
 import { authId } from '../Redux/actions/actions';
 
 const Private = () => {
-  const { user } = useAuth0();
+  const { user, getAccessTokenSilently } = useAuth0();
   const { url, path } = useRouteMatch();
+
+  const [loading, setLoading] = useState(true);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(authId(user.sub.split('|')[1]));
+    const getToken = async () => {
+      const token = await getAccessTokenSilently();
+
+      localStorage.setItem('hora', JSON.stringify(token));
+
+      dispatch(authId(user.sub.split('|')[1]));
+      setLoading(false);
+    }
+
+    getToken();
   }, []);
   
 
   return (
+    !loading ?
     <>
       <SideBar url={url}/>
       <NavBar />
@@ -31,6 +43,7 @@ const Private = () => {
         <Route exact path={`${path}/reading`} component={Reading}/>
       </Switch>
     </>
+    : null
   )
 };
 
