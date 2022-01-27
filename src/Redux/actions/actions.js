@@ -4,6 +4,7 @@ import { URL_DELETE_BOOK_SAVED, URL_GET_READ_LAST, URL_SAVE_BOOK_FOR_LATER } fro
 export const GET_READ_LAST = "GET_READ_LAST";
 export const SAVE_NEW_BOOK = "SAVE_NEW_BOOK";
 export const ADD_NEW_LECTURE = "ADD_NEW_LECTURE";
+export const SET_BOOK_GEN = "SEN_BOOK_GEN";
 export const DELEVE_BOOK_SAVED = "DELETE_BOOK_SAVED";
 export const ADD_ID = "ADD_ID";
 
@@ -49,6 +50,13 @@ export const getReadLast = id => dispatch => {
         .then(res => dispatch({type: GET_READ_LAST, payload: res}))
         .catch(err => console.log(err))
     )
+}
+
+export const setBookGen = genero => {
+    return {
+        type: SET_BOOK_GEN,
+        payload: genero
+    }
 }
 
 

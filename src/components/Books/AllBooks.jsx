@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { URL_GET_ALL_BOOKS } from '../../helpers/urls';
+import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import CircleLoader from '../Loaders/CircleLoader';
 import BookItem from './BookItem';
 import st from './Books.module.css';
 
-const AllBooks = ({openModal}) => {
-  const [data, error, loading] = useFetch(URL_GET_ALL_BOOKS);
+const AllBooks = ({openModal, url}) => {
+  const [data, error, loading] = useFetch(url);
 
   if(!data) return null;
 
