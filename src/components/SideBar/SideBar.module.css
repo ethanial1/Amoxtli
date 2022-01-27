@@ -48,8 +48,7 @@
 }
 
 
-
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .sidebar {
     width: 100%;
     left: 0;
@@ -94,6 +93,10 @@
 
   span {
     font-size: 1rem;
+  }
+
+  .me {
+    display: none;
   }
 
 }

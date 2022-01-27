@@ -24,7 +24,7 @@ const SideBar = ({url}) => {
                     </li>
                 </ul>
             </div>
-            <div>
+            <div className={style.me}>
                 developed by Fernando Tolentino 
             </div>
         </aside>
