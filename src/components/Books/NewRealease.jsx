@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { URL_GET_NEW_REALEASE } from '../../helpers/urls';
 import { useFetch } from '../../hooks/useFetch';
 import CircleLoader from '../Loaders/CircleLoader';
-import BookItem from './BookItem';
+import BookNew from './BookNew';
 import st from './Books.module.css';
 
 const NewRealease = ({openModal}) => {
@@ -12,18 +12,17 @@ const NewRealease = ({openModal}) => {
     if(!data) return null;
 
     if(error) return <div>error</div>;
-    
     return (
         loading ? <CircleLoader /> :
         <>
             <h3>New Realice</h3>
             <div className={st.snap_x}>
                 <div className={st.snap_flex}>
-                { data.map(libro => <BookItem key={libro.idbook} titulo={libro.titulo} autor={libro.autor} lastname={libro.lastname} genero={libro.genero} img={libro.img} openModal={() => openModal(libro.idbook)}/>)}
+                { data.map(libro => <BookNew key={libro.idbook} titulo={libro.titulo} autor={libro.autor} lastname={libro.lastname} genero={libro.genero} color={libro.color} img={libro.img} openModal={() => openModal(libro.idbook)}/>)}
                 </div>
             </div>
         </>
     )
 };
 
-export default NewRealease;
+export default memo(NewRealease);

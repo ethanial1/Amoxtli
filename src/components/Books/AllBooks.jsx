@@ -2,6 +2,7 @@ import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import CircleLoader from '../Loaders/CircleLoader';
 import BookItem from './BookItem';
+import BookNew from './BookNew';
 import st from './Books.module.css';
 
 const AllBooks = ({openModal, url}) => {
@@ -16,7 +17,7 @@ const AllBooks = ({openModal, url}) => {
     <>
       <h3>All our books</h3>
       <div className={st.grid_books}>
-        { data.data.map(libro => <BookItem key={libro.idbook} titulo={libro.titulo} autor={libro.autor} lastname={libro.lastname} genero={libro.genero} img={libro.img} openModal={() => openModal(libro.idbook)}/>)}
+        { data.data.map(libro => <BookNew key={libro.idbook} titulo={libro.titulo} autor={libro.autor} lastname={libro.lastname} genero={libro.genero} color={libro.color} img={libro.img} openModal={() => openModal(libro.idbook)}/>)}
       </div>
     </>
     

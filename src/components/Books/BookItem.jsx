@@ -4,14 +4,14 @@ import style from './Books.module.css';
 const BookItem = ({titulo, autor, lastname, genero, img, openModal}) => {
   return (
     <div className={style.book}>
-        <button className={style.book_item} onClick={openModal}>
-            <img src={`http://localhost:4000/ingress/assets/cover/${img}`} alt={titulo} />
-            <div className={style.book_item_info}>
-                <h5>{titulo}</h5>
-                <span>{autor} {lastname}</span>
-                <span>{genero}</span>
-            </div>
-        </button>
+      <button className={style.book_item} onClick={openModal}>
+      <img src={`http://localhost:4000/ingress/assets/cover/${img}`} alt={titulo} />
+        <div className={style.book_item_info}>
+          <h5>{titulo}</h5>
+          <span>{autor} {lastname}</span>
+          <span>{genero}</span>
+        </div>
+      </button>
     </div>
   )
 };
