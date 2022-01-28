@@ -42,7 +42,7 @@ const Private = () => {
         <Route exact path={path} component={Home}/>
         <Route exact path={`${path}/search`} component={Search}/>
         <Route exact path={`${path}/reading`} component={Reading}/>
-        <Route exact path={`${path}/perfil`} component={UserPerfil} />
+        <Route path={`${path}/perfil`} component={UserPerfil} />
       </Switch>
     </>
     : null

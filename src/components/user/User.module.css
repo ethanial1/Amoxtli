@@ -23,7 +23,7 @@
 .perfil {
     max-width: 980px;
     margin: auto;
-    height: 100vh;
+    height: 100%;
     padding: 30px;
 }
 .foto > h4,

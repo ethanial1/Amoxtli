@@ -9,6 +9,7 @@ body {
   font-family: 'Cabin', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f1f1f3;
 }
 
 code {
@@ -47,7 +48,6 @@ a {
 .wrapper {
   height: 100%;
   margin-left: 250px;
-  background: #f1f1f3;
   transition: all 0.5s;
 }
 
