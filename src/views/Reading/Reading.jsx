@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import BookNew from '../../components/Books/BookNew'
 import Button from '../../components/Buttons/Button';
+import Reader from '../../components/Modal/Reader';
+import { useModal } from '../../hooks/useModal';
 import { getReadLast } from '../../Redux/actions/actions';
 import st from './Reading.module.css';
 
 const Reading = () => {
   const { currentLectures, authid } = useSelector(state => state);
-  const dispatch = useDispatch();
-
   const [currentBook, setCurrentBook] = useState(currentLectures[0]);
+  const [idbook, isOpen, opeModal, closeModal] = useModal(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     authid && dispatch(getReadLast(authid));
@@ -26,7 +28,7 @@ const Reading = () => {
           <p>{currentBook.resumen}</p>
           <span className={st.autor}>{currentBook.autor} {currentBook.lastname}</span>
           <div>
-            <Button titulo="Continual Leyendo" color="black"/>
+            <Button titulo="Continual Leyendo" color="black" cb={opeModal}/>
             <Button titulo="Dejar de Leer" color="black"/>
           </div>
         </div>
@@ -36,6 +38,7 @@ const Reading = () => {
           currentLectures.map(libro => <BookNew key={libro.idbook} titulo={libro.titulo} img={libro.img} color={libro.color} autor={libro.autor} lastname={libro.lastname} openModal={() => setCurrentBook(libro)}/>)
         }
       </div>
+      <Reader isOpen={isOpen} closeModal={closeModal} idbook={idbook}/>
     </div>
   )
 };

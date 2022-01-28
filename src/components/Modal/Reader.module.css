@@ -1,0 +1,45 @@
+.reader {
+    position: fixed;
+    z-index: 999;
+    top: auto;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    margin-left: 250px;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.reader.is_open {
+    display: flex;
+    bottom: 0;
+    height: 100vh;
+    margin-top: 120px;
+}
+
+#viewer_book_show{
+    width: 85%;
+    height: 100vh;
+    position: relative;
+}
+#viewer_book_show > div {
+    width: 100%;
+}
+
+#viewer_book_show body {
+    width: 50vw;
+}
+
+.btn {
+    position: absolute;
+    top: 2%;
+    z-index: 10;
+    right: 20%;
+}
+
+.btn i {
+    font-size: 2rem;
+}
