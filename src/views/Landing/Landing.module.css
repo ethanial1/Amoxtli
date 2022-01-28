@@ -2,13 +2,27 @@
     width: 100%;
     height: 100vh;
 	overflow: hidden;
+	background: black;
 }
+
+/* .container::before, .container::after {
+	content: " ";
+	background-color: rgba(0, 0, 0, 0.790);
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+} */
 
 
 .container > div:nth-child(1) {
     width: 100%;
     height: 100px;
     padding: 0 5rem;
+	position: relative;
+	z-index: 1;
 }
 
 .container > div:nth-child(1) > img{
@@ -17,8 +31,11 @@
 }
 
 .info {
+	color: white;
     width: 100%;
     padding: 0 5rem;
+	position: relative;
+	z-index: 1;
 }
 
 .info > div:nth-child(1) {
@@ -44,7 +61,7 @@
 }
 
 .btns button {
-	color: rgb(3, 3, 3);
+	color: white;
 	transition: all 0.5s;
 	position: relative;
 }
@@ -98,7 +115,7 @@
 }
 
 .card h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #b24126;
 
 }
 
@@ -112,6 +129,7 @@
 .columnas img {
 	display: block;
 	padding: 20px;
+	height: 630px;
 	width: calc(100vh - 500px);
 	transition: all 0.3s ease-in;
 }
@@ -122,7 +140,7 @@
 
 .columnas div:nth-child(1) {
 	position: relative;
-	top: -50px;
+	top: -350px;
 }
 
 .columnas div:nth-child(2) {
@@ -130,6 +148,41 @@
 	top: 50px;
 }
 
+.me {
+	color: white;
+	padding: 20px;
+    writing-mode: vertical-lr;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	top: 0;
+	right: 20px;
+}
+
+.me ul {
+	display: flex;
+}
+
+.me ul li {
+	margin-bottom: 1rem;
+}
+
+.me ul li a i {
+	color: white;
+}
+
+
+.spotlight {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: radial-gradient(
+		circle,
+		transparent 160px,
+		rgba(0, 0, 0, 0.99) 200px
+	);
+	top: 0;
+  }
 
 @media (max-width: 767.98px) { 
 	.container {
