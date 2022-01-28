@@ -21,12 +21,17 @@ const Private = () => {
 
   useEffect(() => {
     const getToken = async () => {
-      const token = await getAccessTokenSilently();
+      try {
+        const token = await getAccessTokenSilently();
 
-      localStorage.setItem('hora', JSON.stringify(token));
+        localStorage.setItem('hora', JSON.stringify(token));
 
-      dispatch(authId(user.sub.split('|')[1]));
-      setLoading(false);
+        dispatch(authId(user.sub.split('|')[1]));
+        setLoading(false);
+
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     getToken();

@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import logo from '../../assets/Logo1.png';
 import st from './Landing.module.css';
+import PreLoader from '../../components/Loaders/PreLoader';
 
 const Landing = () => {
 
@@ -12,8 +13,9 @@ const Landing = () => {
   } = useAuth0();
   
   return (
+    isLoading ? <PreLoader /> :
     <div className={st.container}>
-      <div>
+      <div className={st.nav}>
         <img src={logo} alt="amoxtli"/>
       </div>
       <div className={st.info}>
@@ -30,6 +32,16 @@ const Landing = () => {
               <h2>Un lugar donde todos pueden compartir sus mundos</h2>
               <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste cum hic.</span>
           </div>
+        </div>
+      </div>
+      <div className={st.columnas}>
+        <div>
+          <img src='http://localhost:4000/ingress/assets/cover/cover6.jpg' alt="" />
+          <img src='http://localhost:4000/ingress/assets/cover/cover7.jpg' alt="" />
+        </div>
+        <div>
+          <img src='http://localhost:4000/ingress/assets/cover/cover5.jpg' alt="" />
+          <img src='http://localhost:4000/ingress/assets/cover/cover9.jpg' alt="" />
         </div>
       </div>
     </div>

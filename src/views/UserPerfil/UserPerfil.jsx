@@ -14,8 +14,8 @@ const UserPerfil = () => {
             <h3>Settings</h3>
             <div className={st.nav}>
                 <ul>
-                    <li><NavLink to={url}>Perfil</NavLink></li>
-                    <li><NavLink to={`${url}/saved`}>Books Saved</NavLink></li>
+                    <li><NavLink exact to={url}>Perfil</NavLink></li>
+                    <li><NavLink exact to={`${url}/saved`}>Books Saved</NavLink></li>
                 </ul>
             </div>
             <Switch>

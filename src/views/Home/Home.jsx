@@ -2,7 +2,6 @@ import React from 'react';
 import AllBooks from '../../components/Books/AllBooks';
 import NewRealease from '../../components/Books/NewRealease';
 import ReadLast from '../../components/Books/ReadLast';
-import PreLoader from '../../components/Loaders/PreLoader';
 import Modal from '../../components/Modal/Modal';
 import { URL_GET_ALL_BOOKS } from '../../helpers/urls';
 import { useModal } from '../../hooks/useModal';
@@ -21,7 +20,6 @@ const Home = () => {
         <AllBooks openModal={opeModal} url={URL_GET_ALL_BOOKS}/>
       </div>
       <Modal isOpen={isOpen} closeModal={closeModal} idbook={idbook}/>
-      <PreLoader />
     </div>
   )
 };
