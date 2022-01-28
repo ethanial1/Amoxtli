@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import { helpHttp } from '../../helpers/helpHttp';
 import { URL_GET_ALL_BOOKS } from '../../helpers/urls';
 import { addNewLecture, deleteBookSaved, saveNewBook } from '../../Redux/actions/actions';
@@ -31,6 +30,7 @@ const Modal = ({isOpen, closeModal, idbook}) => {
             }
         }
         idbook && getInfo();
+
     }, [idbook]);
     
     const handleSave = () => {

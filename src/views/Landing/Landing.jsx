@@ -1,35 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, memo } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import logo from '../../assets/Logo1.png';
 import st from './Landing.module.css';
 import PreLoader from '../../components/Loaders/PreLoader';
 
 const Landing = () => {
-  const spot = useRef();
   const { isLoading, error, loginWithRedirect } = useAuth0();
-
-  let spotlightSize = 'transparent 160px, rgba(0, 0, 0, 0.85) 200px)';
-
-  useEffect(() => {
-    window.addEventListener('mousemove', e => updateSpotlight(e));
-
-    window.addEventListener('mousedown', e => {
-        spotlightSize = 'transparent 130px, rgba(0, 0, 0, 0.95) 150px)';
-        updateSpotlight(e);
-    });
-
-    window.addEventListener('mouseup', e => {
-        spotlightSize = 'transparent 160px, rgba(0, 0, 0, 0.85) 200px)';
-        updateSpotlight(e);
-    });
-  }, []);
-
-  function updateSpotlight(e) {
-    spot.current.style.backgroundImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
-
-}
-  
-  
   return (
     isLoading ? <PreLoader /> :
     <div className={st.container}>
@@ -69,44 +45,8 @@ const Landing = () => {
           </ul>
         </div>
       </div>
-      <div className={st.spotlight} ref={spot}></div>
     </div>
   )
 };
 
-export default Landing;
-
-/**
- * 
-//DOM load event
-window.addEventListener("DOMContentLoaded", () => {
-
-    const spotlight = document.querySelector('.spotlight');
-
-    let spotlightSize = 'transparent 160px, rgba(0, 0, 0, 0.85) 200px)';
-
-    window.addEventListener('mousemove', e => updateSpotlight(e));
-
-    window.addEventListener('mousedown', e => {
-
-        spotlightSize = 'transparent 130px, rgba(0, 0, 0, 0.95) 150px)';
-
-        updateSpotlight(e);
-
-    });
-
-    window.addEventListener('mouseup', e => {
-
-        spotlightSize = 'transparent 160px, rgba(0, 0, 0, 0.85) 200px)';
-
-        updateSpotlight(e);
-
-    });
-
-    function updateSpotlight(e) {
-
-        spotlight.style.backgroundImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
-
-    }
-});
- */
+export default memo(Landing);

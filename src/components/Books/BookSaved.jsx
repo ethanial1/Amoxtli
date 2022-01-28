@@ -15,7 +15,6 @@ const BookSaved = () => {
     return(
         loading ? <CircleLoader /> :
         <div className='wrapper'>
-            <h3>Book Saved</h3>
             <div className={st.grid_books}>
                 {
                     data.map(libro => <BookNew key={libro.idbook} titulo={libro.titulo} autor={libro.autor} lastname={libro.lastname} genero={libro.genero} color={libro.color} img={libro.img} />)

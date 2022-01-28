@@ -11,12 +11,14 @@ const UserPerfil = () => {
 
     return (
         <div className='wrapper'>
-            <h3>Settings</h3>
             <div className={st.nav}>
-                <ul>
-                    <li><NavLink exact to={url}>Perfil</NavLink></li>
-                    <li><NavLink exact to={`${url}/saved`}>Books Saved</NavLink></li>
-                </ul>
+                <h3>Settings</h3>
+                <div>
+                    <ul>
+                        <li><NavLink exact to={url} activeClassName={st.user_nav}>Perfil</NavLink></li>
+                        <li><NavLink exact to={`${url}/saved`} activeClassName={st.user_nav}>Books Saved</NavLink></li>
+                    </ul>
+                </div>
             </div>
             <Switch>
                 <Route exact path={path} component={Perfil}/>

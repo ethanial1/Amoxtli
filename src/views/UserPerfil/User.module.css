@@ -1,3 +1,32 @@
 .nav {
-    
+    margin-left: 250px;
 }
+
+.nav ul {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav ul li {
+    font-size: 1rem;
+    margin-right: 2rem;
+}
+.nav ul li a {
+    color: black;
+}
+.user_nav {
+    color: #105cb4;
+    transition: all .3s ease-in;
+}
+
+.user_nav::before {
+    height: 20px;
+    width: 50px;
+    margin-top: .6rem;
+    content: "";
+    border-bottom: 4px solid #1c6fce;
+    position: absolute;
+    transition: all .3s ease-in;
+}
+  

@@ -124,6 +124,8 @@
 	top: 0;
 	right: 0;
 	display: flex;
+	overflow: hidden;
+	height: 100vh;
 }
 
 .columnas img {
