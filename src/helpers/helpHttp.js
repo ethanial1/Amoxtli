@@ -26,7 +26,6 @@ export const helpHttp = () => {
     const get = (url, options = {}) => custonFetch(url, options);
 
     const post = (url, options = {}) => {
-        console.log(options)
         options.method = 'POST';
         return custonFetch(url, options);
     }

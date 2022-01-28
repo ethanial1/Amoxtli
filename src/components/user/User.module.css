@@ -18,3 +18,52 @@
         display: none;
     }
 }
+
+
+.perfil {
+    max-width: 980px;
+    margin: auto;
+    height: 100vh;
+    padding: 30px;
+}
+.foto > h4,
+.foto > span {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+}
+.foto > img {
+    margin-right: 1rem;
+    border-radius: 100%;
+}
+
+.form > div:nth-child(1) {
+    display: flex;
+    padding: 20px;
+}
+
+.form_group {
+    width: 20.4rem;
+    height: 4.7rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
+}
+
+.form_group > label {
+    font-size: .8rem;
+    display: block;
+}
+
+.form_group > input {
+    border: none;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+
+.form > div:nth-child(2) {
+    display: flex;
+    padding: 20px;
+}

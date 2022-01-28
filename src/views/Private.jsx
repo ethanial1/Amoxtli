@@ -9,6 +9,7 @@ import Reading from './Reading/Reading';
 import Search from './Search/Search';
 import { useDispatch } from 'react-redux';
 import { authId } from '../Redux/actions/actions';
+import UserPerfil from './UserPerfil/UserPerfil';
 
 const Private = () => {
   const { user, getAccessTokenSilently } = useAuth0();
@@ -41,6 +42,7 @@ const Private = () => {
         <Route exact path={path} component={Home}/>
         <Route exact path={`${path}/search`} component={Search}/>
         <Route exact path={`${path}/reading`} component={Reading}/>
+        <Route exact path={`${path}/perfil`} component={UserPerfil} />
       </Switch>
     </>
     : null
