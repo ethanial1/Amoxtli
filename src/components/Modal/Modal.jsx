@@ -95,11 +95,15 @@ const Modal = ({isOpen, closeModal, idbook}) => {
                     }
                 </div>
                 <div className={st.actions}>
-                    <NavLink onClick={handleRead} to={`/amoxtli/reading?id=${idbook}`} style={{backgroundColor: data.color}}>
-                        {
-                            data.leyendo ? "Continuar Leyendo" : "Leer"
-                        }
-                    </NavLink>
+                    {
+                        data.file ?
+                        <NavLink onClick={handleRead} to={`/amoxtli/reading?id=${idbook}`} style={{backgroundColor: data.color}}>
+                            {
+                                data.leyendo ? "Continuar Leyendo" : "Leer"
+                            }
+                        </NavLink>
+                        : <div>Libro de Ejemplo</div>
+                    }
                 </div>
             </div> 
         </article>

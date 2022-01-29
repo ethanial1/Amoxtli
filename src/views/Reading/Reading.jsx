@@ -19,16 +19,15 @@ const Reading = () => {
 
   useEffect(() => {
     if(query.get('id')) {
-        const bb = currentLectures.filter(ele => ele.idbook === parseInt(query.get('id')));
-        console.log(bb)
-        setCurrentBook(bb[0] || currentLectures[currentLectures.length-1])
+      const bb = currentLectures.filter(ele => ele.idbook === parseInt(query.get('id')));
+      setCurrentBook(bb[0] || currentLectures[currentLectures.length-1])
     }
     //authid && dispatch(getReadLast(authid));
   },[authid]);
 
   const handleDeleteLectura = () => {
+    setCurrentBook(null)
     dispatch(deleteLectura(currentBook.idbook, authid));
-    setCurrentBook(currentLectures[currentLectures.length-1])
   }
 
   return (
