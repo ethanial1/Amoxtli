@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ReactReader } from 'react-reader';
 
 import st from './Reader.module.css';
@@ -8,6 +8,9 @@ const Reader = ({idbook, isOpen, closeModal}) => {
     const locationChanged = (epubcifi) => {
         setLocation(epubcifi)
     }
+
+
+    
 
     if(!idbook) return null;
     
