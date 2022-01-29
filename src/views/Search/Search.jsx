@@ -10,7 +10,7 @@ const Search = () => {
   const [idbook, isOpen, opeModal, closeModal] = useModal(false);
 
   const idGen = useSelector(state => state.idGen);
-  let url = `http://localhost:4000/ingress/books/gen/0/${idGen}`;
+  let url = `https://amoxtliapi.herokuapp.com/ingress/books/gen/0/${idGen}`;
 
   return (
     <div className='wrapper'>

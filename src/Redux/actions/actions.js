@@ -9,11 +9,9 @@ export const DELEVE_BOOK_SAVED = "DELETE_BOOK_SAVED";
 export const DELETE_LECTURA = "DELETE_LECTURA";
 export const ADD_ID = "ADD_ID";
 
-const token = JSON.parse(localStorage.getItem('hora'));
-
 export const addNewLecture = (book, userId ) => dispatch => {
     return (
-        helpHttp().post("http://localhost:4000/ingress/books/addbook", {
+        helpHttp().post("https://amoxtliapi.herokuapp.com/ingress/books/addbook", {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -114,7 +112,7 @@ export const deleteLectura = (idBook, iduser) => dispatch => {
 export const authId = key => dispatch => {
 
     return (
-        helpHttp().post("http://localhost:4000/ingress/users/save", {
+        helpHttp().post("https://amoxtliapi.herokuapp.com/ingress/users/save", {
             headers: {
                 'Content-Type': 'application/json',
             },

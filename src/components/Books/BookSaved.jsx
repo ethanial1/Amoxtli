@@ -8,7 +8,7 @@ import st from './Books.module.css';
 
 const BookSaved = () => {
     const { authid } = useSelector(state => state);
-    const [data, error, loading] = useFetch(`http://localhost:4000/ingress/books/saved/${authid}`);
+    const [data, error, loading] = useFetch(`https://amoxtliapi.herokuapp.com/ingress/books/saved/${authid}`);
 
     if(!data) return null;
 

@@ -62,7 +62,7 @@ const Modal = ({isOpen, closeModal, idbook}) => {
                 </div>
                 <div className={st.cover}>
                     <div className={`${st.cover_img} ${loading && st.loader}`}>
-                        <img src={`http://localhost:4000/ingress/assets/cover/${data.img}`} alt={data.titulo}/>
+                        <img src={`https://amoxtliapi.herokuapp.com/ingress/assets/cover/${data.img}`} alt={data.titulo}/>
                     </div>
                     <div className={`${st.cover_info} ${loading && st.loader_text}`}>
                         <h2>{data.titulo}</h2>

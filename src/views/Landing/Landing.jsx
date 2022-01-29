@@ -29,12 +29,12 @@ const Landing = () => {
       </div>
       <div className={st.columnas}>
         <div>
-          <img src='http://localhost:4000/ingress/assets/cover/cover6.jpg' alt="" />
-          <img src='http://localhost:4000/ingress/assets/cover/cover7.jpg' alt="" />
+          <img src='https://amoxtliapi.herokuapp.com/ingress/assets/cover/cover6.jpg' alt="" />
+          <img src='https://amoxtliapi.herokuapp.com/ingress/assets/cover/cover7.jpg' alt="" />
         </div>
         <div>
-          <img src='http://localhost:4000/ingress/assets/cover/cover5.jpg' alt="" />
-          <img src='http://localhost:4000/ingress/assets/cover/cover9.jpg' alt="" />
+          <img src='https://amoxtliapi.herokuapp.com/ingress/assets/cover/cover5.jpg' alt="" />
+          <img src='https://amoxtliapi.herokuapp.com/ingress/assets/cover/cover9.jpg' alt="" />
         </div>
         <div className={st.me}>
           Developed by Fernando Tolentino Santiago

@@ -38,7 +38,7 @@ const Reading = () => {
           { !currentBook ? <div className={st.msg}>selecciona un libro</div> :
             <div className={st.read}>
               <div className={st.item}>
-                <img src={`http://localhost:4000/ingress/assets/cover/${currentBook.img}`} alt={currentBook.titulo} />
+                <img src={`https://amoxtliapi.herokuapp.com/ingress/assets/cover/${currentBook.img}`} alt={currentBook.titulo} />
               </div>
               <div className={st.info}>
                 <h2>{currentBook.titulo}</h2>

@@ -10,7 +10,7 @@ const BookNew = ({titulo, autor, lastname, genero, color, img, openModal}) => {
             <div className={st.book}>
                 <div className={st.front}>
                     <div className={st.cover}>
-                        <img src={`http://localhost:4000/ingress/assets/cover/${img}`} alt={titulo} />
+                        <img src={`https://amoxtliapi.herokuapp.com/ingress/assets/cover/${img}`} alt={titulo} />
                     </div>
                 </div>
                 <div className={st.left_side} style={estilo}>

@@ -14,7 +14,7 @@ const BookCard = ({titulo, img, color, fecha}) => {
                     </div>
                 </div>
                 <div className={styles.book_img}>
-                    <img src={`http://localhost:4000/ingress/assets/cover/${img}`} alt={titulo} />
+                    <img src={`https://amoxtliapi.herokuapp.com/ingress/assets/cover/${img}`} alt={titulo} />
                 </div>
             </button>
         </div>

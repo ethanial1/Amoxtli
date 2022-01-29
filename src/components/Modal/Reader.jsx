@@ -18,7 +18,7 @@ const Reader = ({idbook, isOpen, closeModal}) => {
                 <ReactReader 
                     location={location}
                     locationChanged={locationChanged}
-                    url={`http://localhost:4000/ingress/books/epub/${idbook}.epub`}
+                    url={`https://amoxtliapi.herokuapp.com/ingress/books/epub/${idbook}.epub`}
                 />
             </div>
         </div>
