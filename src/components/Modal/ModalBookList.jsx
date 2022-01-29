@@ -1,7 +1,8 @@
 import React from 'react';
 import st from './Modal.module.css';
 
-const ModalBookList = () => {
+export const ModalBookList = () => {
+
   return (
     <div className={st.books_related}>
         <div className={st.book_list_item}>
@@ -15,4 +16,4 @@ const ModalBookList = () => {
   )
 };
 
-export default ModalBookList;
+

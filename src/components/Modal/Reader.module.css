@@ -49,6 +49,7 @@
     }
     .reader.is_open {
         top: 0;
+        width: 100%;
     }
     #viewer_book_show{ 
         width: 100%;

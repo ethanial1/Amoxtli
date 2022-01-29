@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { helpHttp } from '../../helpers/helpHttp';
 import { URL_GET_ALL_BOOKS } from '../../helpers/urls';
 import { addNewLecture, deleteBookSaved, saveNewBook } from '../../Redux/actions/actions';
@@ -20,7 +21,6 @@ const Modal = ({isOpen, closeModal, idbook}) => {
         const getInfo = async () => {
             try {
                 setLoading(true);
-
                 let res = await helpHttp().get(`${URL_GET_ALL_BOOKS}${idbook}/${authid}`);
                 setData(res)
             } catch (error) {
@@ -95,11 +95,11 @@ const Modal = ({isOpen, closeModal, idbook}) => {
                     }
                 </div>
                 <div className={st.actions}>
-                    <button onClick={handleRead} style={{backgroundColor: data.color}}>
+                    <NavLink onClick={handleRead} to={`/amoxtli/reading?id=${idbook}`} style={{backgroundColor: data.color}}>
                         {
                             data.leyendo ? "Continuar Leyendo" : "Leer"
                         }
-                    </button>
+                    </NavLink>
                 </div>
             </div> 
         </article>

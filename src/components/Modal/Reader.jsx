@@ -9,9 +9,6 @@ const Reader = ({idbook, isOpen, closeModal}) => {
         setLocation(epubcifi)
     }
 
-
-    
-
     if(!idbook) return null;
     
     return (

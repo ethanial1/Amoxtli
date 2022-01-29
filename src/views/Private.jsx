@@ -36,7 +36,6 @@ const Private = () => {
 
     getToken();
   }, []);
-  
 
   return (
     !loading ?

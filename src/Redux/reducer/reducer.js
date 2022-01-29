@@ -1,4 +1,4 @@
-import { ADD_ID, ADD_NEW_LECTURE, GET_READ_LAST, SET_BOOK_GEN } from "../actions/actions"
+import { ADD_ID, ADD_NEW_LECTURE, DELETE_LECTURA, GET_READ_LAST, SET_BOOK_GEN } from "../actions/actions"
 
 const initialState = {
     authid: null,
@@ -21,12 +21,17 @@ const rootReducer = (state = initialState, action) => {
         case ADD_NEW_LECTURE:
             return {
                 ...state,
-                currentLectures: [...state.currentLectures, action.payload]
+                currentLectures: [action.payload, ...state.currentLectures]
             }
         case SET_BOOK_GEN:
             return {
                 ...state,
                 idGen: action.payload
+            }
+        case DELETE_LECTURA:
+            return {
+                ...state,
+                currentLectures: state.currentLectures.filter(ele => ele.idbook !== action.payload)
             }
         default:
             return state

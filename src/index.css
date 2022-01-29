@@ -61,5 +61,16 @@ a {
   .wrapper {
     margin-left: 0;
   }
+
+  li > .active::before {
+    height: 0;
+    width: 30px;
+    content: "";
+    border-left: 0;
+    position: absolute;
+    top: 0;
+    left: auto;
+    border-bottom: 4px solid #1c6fce;
+  }
 }
 

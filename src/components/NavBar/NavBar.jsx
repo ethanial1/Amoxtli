@@ -5,6 +5,8 @@ import st from './NavBar.module.css';
 
 const NavBar = () => {
     const { user } = useAuth0();
+
+
     return (
         <nav className={st.nav_bar}>
             <div>
