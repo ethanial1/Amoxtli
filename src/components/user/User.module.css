@@ -1,3 +1,9 @@
+.wrapper {
+    height: 100%;
+    margin-left: 250px;
+    transition: all 0.5s;
+}
+
 .user_card {
     width: 100%;
     text-align: center;
@@ -67,3 +73,23 @@
     display: flex;
     padding: 20px;
 }
+
+
+@media (max-width: 600px) {
+    .form > div:nth-child(1) {
+        display: block;
+        padding: 20px;
+    }
+
+    .form_group {
+        width: 15rem;
+        margin-bottom: 1rem;
+    }
+
+    .form > div:nth-child(2) {
+        display: block;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+

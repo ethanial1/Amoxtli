@@ -6,7 +6,7 @@ const Perfil = () => {
     const { user } = useAuth0();
 
     return (
-        <div className={`${st.perfil} wrapper`}>
+        <div className={`${st.perfil} ${st.wrapper}`}>
             <div className={st.foto}>
                 <img src={user.picture} alt={user.name} />
             </div>

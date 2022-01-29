@@ -29,4 +29,16 @@
     position: absolute;
     transition: all .3s ease-in;
 }
-  
+
+
+@media (max-width: 600px) {
+    .nav {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 992px) { 
+    .nav {
+        margin-left: 0;
+    }
+}
