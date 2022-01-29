@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, memo } from 'react';
+import React, { memo } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import logo from '../../assets/Logo1.png';
 import st from './Landing.module.css';

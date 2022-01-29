@@ -7,12 +7,13 @@ const HeroBook = ({img, titulo, descrip}) => {
             <div className={st.hero_book_img}>
                 <div className={st.hero_book_info}>
                     <div>
-                        <img src="https://imagessl4.casadellibro.com/a/l/t0/74/9788490437674.jpg" />
+                        <img src="https://imagessl4.casadellibro.com/a/l/t0/74/9788490437674.jpg" alt='heredero'/>
                     </div>
                     <div>
                         <h2>La segunda revolución Heredero</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi sed, nostrum explicabo repudiandae itaque deleniti consectetur dolor tempore enim suscipit eligendi perferendis laborum ut praesentium reiciendis, omnis vel laudantium.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, corporis quis provident totam porro necessitatibus ad neque, ipsa, amet voluptas eum. Amet reiciendis nesciunt beatae corrupti deleniti voluptas facere suscipit!</p>
+                        <p>
+                            Casi veinte años después, los estudiantes del Liceo de la Guardia de Blyd se entrenan para proteger con su magia a una sociedad que hace años que vive en paz. Pero cuando la sombra de Dominio vuelve a acechar al país, un grupo de estudiantes tendrá que enfrentarse a los secretos del pasado... sin revelar los suyos.
+                        </p>
                     </div>
                 </div>
             </div>

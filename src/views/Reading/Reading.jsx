@@ -5,7 +5,7 @@ import BookNew from '../../components/Books/BookNew'
 import Button from '../../components/Buttons/Button';
 import Reader from '../../components/Modal/Reader';
 import { useModal } from '../../hooks/useModal';
-import { deleteLectura, getReadLast } from '../../Redux/actions/actions';
+import { deleteLectura} from '../../Redux/actions/actions';
 import st from './Reading.module.css';
 
 const Reading = () => {
