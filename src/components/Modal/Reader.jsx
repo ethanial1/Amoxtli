@@ -3,15 +3,13 @@ import { ReactReader } from 'react-reader';
 
 import st from './Reader.module.css';
 
-const Reader = ({id, isOpen, closeModal}) => {
+const Reader = ({idbook, isOpen, closeModal}) => {
     const [location, setLocation] = useState(null)
     const locationChanged = (epubcifi) => {
         setLocation(epubcifi)
     }
 
-    useEffect(() => {
-
-    }, [id]);
+    if(!idbook) return null;
     
     return (
         <div className={`${st.reader} ${ isOpen && st.is_open }`}>

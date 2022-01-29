@@ -299,6 +299,21 @@
 
 }
 
+@media (max-width: 992px) { 
+    .hero_book_info {
+        flex-direction: column;
+    }
+    .hero_book_info div:nth-child(1) > img { 
+        height: 150px;
+        width: 120px;
+    }
+    .hero_book_info div:nth-child(2) { 
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
 /* ================ Card de Generos ============== */
 .gen_container {
     padding: 26px;

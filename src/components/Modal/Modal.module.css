@@ -4,7 +4,7 @@
     top: 0;
     right: -440px;
     width: 400px;
-    height: 0;
+    height: 100vh;
     background-color: white;
     /* display: none; */
     justify-content: flex-end;

@@ -28,7 +28,7 @@ const Reading = () => {
           <p>{currentBook.resumen}</p>
           <span className={st.autor}>{currentBook.autor} {currentBook.lastname}</span>
           <div>
-            <Button titulo="Continual Leyendo" color="black" cb={opeModal}/>
+            <Button titulo="Continual Leyendo" color="black" cb={() => opeModal(currentBook.idbook)}/>
             <Button titulo="Dejar de Leer" color="black"/>
           </div>
         </div>
