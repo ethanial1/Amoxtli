@@ -25,7 +25,12 @@ const SideBar = ({url}) => {
                 </ul>
             </div>
             <div className={style.me}>
-                developed by Fernando Tolentino 
+                <h4>Fernando Tolentino Santiago</h4>
+                <span>Developer</span>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/fernandotolentinosa/" target="_blank" rel="noreferrer"><i className='bx bxl-linkedin-square'></i></a></li>
+                    <li><a href="https://github.com/ethanial1" target="_blank" rel="noreferrer"><i className='bx bxl-github'></i></a></li>
+                </ul>
             </div>
         </aside>
     )

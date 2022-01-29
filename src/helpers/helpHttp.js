@@ -1,8 +1,9 @@
 export const helpHttp = () => {
-
+    const token = localStorage.getItem('hora');
     const custonFetch = (endPoint, options) => {
         const defaultHeader = {
             accept: "application/json",
+            authorization: `Bearer ${JSON.parse(token)}`
         }
 
         const controller = new AbortController();
