@@ -1,7 +1,6 @@
 import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import CircleLoader from '../Loaders/CircleLoader';
-import BookItem from './BookItem';
 import BookNew from './BookNew';
 import st from './Books.module.css';
 
