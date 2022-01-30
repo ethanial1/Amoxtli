@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Books.module.css';
 
-const BookCard = ({titulo, img, color, fecha}) => {
+const BookCard = ({titulo, img, color, fecha, idbook}) => {
     return (
         <div className={styles.snap_center}>
-            <button className={styles.book_card_item}>
+            <NavLink to={`/amoxtli/reading?id=${idbook}`} className={styles.book_card_item}>
                 <div className={styles.book_details} style={{background: color}}>
                     <div className={styles.book_info}>
                         <div>
@@ -16,7 +17,7 @@ const BookCard = ({titulo, img, color, fecha}) => {
                 <div className={styles.book_img}>
                     <img src={`https://amoxtliapi.herokuapp.com/ingress/assets/cover/${img}`} alt={titulo} />
                 </div>
-            </button>
+            </NavLink>
         </div>
     )
 };

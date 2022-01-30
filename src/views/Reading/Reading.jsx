@@ -21,6 +21,7 @@ const Reading = () => {
     if(query.get('id')) {
       const bb = currentLectures.filter(ele => ele.idbook === parseInt(query.get('id')));
       setCurrentBook(bb[0] || currentLectures[currentLectures.length-1])
+      opeModal(query.get('id'))
     }
     //authid && dispatch(getReadLast(authid));
   },[authid]);

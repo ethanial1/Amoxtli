@@ -20,7 +20,7 @@ const ReadLast = () => {
             <h3>Books you read last</h3>
             <div className={st.snap_x}>
                 <div className={st.snap_flex}>
-                    { currentLectures.map(libro => <BookCard key={libro.idbook} titulo={libro.titulo} currentpage={libro.currentpage} img={libro.img} color={libro.color}/>)}
+                    { currentLectures.map(libro => <BookCard key={libro.idbook} titulo={libro.titulo} currentpage={libro.currentpage} img={libro.img} color={libro.color} idbook={libro.idbook}/>)}
                 </div>
             </div>
             </>

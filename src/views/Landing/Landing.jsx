@@ -17,13 +17,13 @@ const Landing = () => {
         <div>
           <h1>Amoxtli</h1>
             <span>un lugar de mundos e ideas</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iusto praesentium modi veritatis autem accusamus aspernatur veniam. Atque, deserunt. Est omnis similique ipsa quo doloribus non soluta eos natus quidem.</p>
+            <p>No importa lo ocupado que piensas que estas, debes encontrar tiempo para leer, o entregarte a una ignorancia autoelegida. <cite>Confucio.</cite></p>
             <Button titulo="Iniciar Sesión" cb={loginWithRedirect}/>
         </div>
         <div className={st.carousel}>
           <div className={st.card}>
               <h2>Un lugar donde todos pueden compartir sus mundos</h2>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste cum hic.</span>
+              <span> La lectura es la fábrica de la imaginación- <cite> Jairo Gomelsky</cite></span>
           </div>
         </div>
       </div>
